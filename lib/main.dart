@@ -9,6 +9,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int temperature = 0;
+  String location = "uday";
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,9 +26,49 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Text(
-                temperature.toString() + 'C',
-              )
+              Center(
+                child: Column(
+                  children: <Widget>[
+                    Text(
+                      temperature.toString() + 'C',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 60,
+                      ),
+                    ),
+                    Text(
+                      location,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 60,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      width: 300,
+                      child: TextField(
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                        ),
+                        decoration: InputDecoration(
+                          hintText: 'Search another location',
+                          hintStyle: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                          prefixIcon: Icon(
+                            Icons.search,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ),
