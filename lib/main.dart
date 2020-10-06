@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,6 +11,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int temperature = 0;
   String location = "uday";
+
+  void fetchSearch(String input) {}
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
